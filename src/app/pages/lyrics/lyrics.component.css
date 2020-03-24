@@ -1,0 +1,32 @@
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.lyrics, .error-msg {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.artist, .title {
+  margin-bottom: 2rem;
+}
+
+pre {
+  margin: 0;
+  /* width: 500px; */
+  white-space: pre-wrap;
+}
+
+.loading-spinner {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.error-msg {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 190, 190);
+}

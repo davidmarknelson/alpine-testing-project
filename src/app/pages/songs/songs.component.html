@@ -1,0 +1,22 @@
+<div class="songs-container">
+  <mat-card class="song-card" *ngFor='let song of songs$ | async'>
+    <!-- Image -->
+    <img mat-card-image [src]='song.picture' alt="Photo of a album">
+
+    <!-- Title, Artist, Album -->
+    <mat-card-header>
+      <mat-card-title>{{ song.title }}</mat-card-title>
+      <mat-card-subtitle>Artist: {{ song.artist }}</mat-card-subtitle>
+      <mat-card-subtitle>Album: {{ song.album }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <div class="space-fill"></div>
+
+    <!-- Link to lyrics -->
+    <mat-card-actions>
+      <a mat-flat-button color='accent' [routerLink]="['/lyrics', song.artist, song.title]">
+        View lyrics <mat-icon>chevron_right</mat-icon>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>

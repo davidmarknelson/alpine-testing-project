@@ -1,0 +1,38 @@
+<div class="container">
+  <!-- Button back to songs -->
+  <a 
+    mat-flat-button 
+    routerLink='/songs' 
+    color='primary'>
+    <mat-icon>chevron_left</mat-icon> Back to songs
+  </a>
+  
+  <!-- Lyrics -->
+  <div 
+    class="lyrics"
+    *ngIf='lyrics'>
+  
+    <h1 class='artist'>{{ artist }}</h1>
+  
+    <h3 class='title'>{{ songTitle }}</h3>
+  
+    <pre 
+      class='lyrics'>
+      {{ lyrics.lyrics }}
+    </pre>
+  </div>
+  
+  <!-- Error Message -->
+  <mat-card 
+    class="error-msg"
+    *ngIf='errorMsg'>
+    {{ errorMsg }}
+  </mat-card>
+  
+  <!-- Loading Spinner -->
+  <div 
+    class="loading-spinner"
+    *ngIf='loading'>
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

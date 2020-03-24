@@ -2,3 +2,9 @@ h1 {
   text-align: center;
   margin-top: 2rem;
 }
+
+.songs-container {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+}
